@@ -1,11 +1,12 @@
 package com.driver;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
-
+@Service
 public class StudentService {
-
+@Autowired
     StudentRepository studentRepository = new StudentRepository();
     public void addStudent(Student student) {
         studentRepository.addStudent(student);
@@ -20,23 +21,27 @@ public class StudentService {
     }
 
     public Student getStudentByName(String name) {
-        Student student=null;
-        return student=studentRepository.getStudentByName(name);
+        Student student;
+         student=studentRepository.getStudentByName(name);
+         return student;
     }
 
     public Teacher getTeacherByName(String name) {
-        Teacher teacher=null;
-        return teacher=studentRepository.getTeacherByName(name);
+        Teacher teacher;
+         teacher=studentRepository.getTeacherByName(name);
+        return teacher;
     }
 
     public List<String> getStudentsByTeacherName(String teacher) {
-        List<String> students = null;
-        return students=studentRepository.getStudentsByTeacherName(teacher);
+        List<String> students ;
+       students=studentRepository.getStudentsByTeacherName(teacher);
+       return students;
     }
 
     public List<String> getAllStudents() {
-        List<String> students = null;
-        return students=studentRepository. getAllStudents();
+        List<String> students ;
+        students=studentRepository. getAllStudents();
+        return students;
     }
 
     public void deleteTeacherByName(String teacher) {
