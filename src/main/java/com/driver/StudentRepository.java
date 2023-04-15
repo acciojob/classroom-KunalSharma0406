@@ -22,7 +22,7 @@ public class StudentRepository {
 
     public void addStudentTeacherPair(String student, String teacher) {
         String student1 = null;
-        String teacher1=null;
+        String teacher1 = null;
        for(Student s : Studentdb.values()){
            if(Objects.equals(student, s.getName())){
                student1=s.getName();
