@@ -5,8 +5,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import java.util.List;
 
 public class StudentService {
-    @Autowired
-    StudentRepository studentRepository;
+
+    StudentRepository studentRepository = new StudentRepository();
     public void addStudent(Student student) {
         studentRepository.addStudent(student);
     }
